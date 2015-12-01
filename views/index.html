@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3>Pages</h3>
+  <h3> Greetings Human, welcome to the Guest Page  </h3>
+  <h4> (Please write a comment, enter your name, and hit submit) </h4>
+  <hr>
+  <form method="POST" action="/guestbook/submit">
+    Name: <input type="text" lable="name" name="name" />
+    Comment: <textarea name = "comment" cols = "50" rows = "5"> Write your comment here
+    </textarea>
+    <button type="submit">Pubmit</button>
+  </form>
+  <hr>
+{% endblock %}
