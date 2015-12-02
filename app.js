@@ -22,9 +22,12 @@ app.use(bodyParser.json());
 //app.use('/wiki', require('./routes/wiki'));
 //app.use('/users', require('./routes/users'));
 
+app.use('/guestbook', require('./routes/guestbook'));
+
 app.get('/', function (req, res) {
    res.render('index');
 });
+
 
 app.use(function (err, req, res, next) {
     console.error(err);
