@@ -12,6 +12,10 @@ var postSchema = new mongoose.Schema({
 	comment: {
 		type: String,
 		required: true
+	},
+	color: {
+		type: String,
+		required: true
 	}
 })
 
