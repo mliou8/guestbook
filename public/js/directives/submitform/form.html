@@ -1,0 +1,16 @@
+<div class="container">
+  <h3> Greetings Human, welcome to the Guest Page  </h3>
+  <h4> (Please write a comment, enter your name, and hit submit) </h4>
+  <hr>
+  <form method="POST" name="postForm" ng-submit="postComment()">
+    Name: <input type="text" name="name" ng-model="post.name" placeholder="Name" required ng-maxlength="10"/>
+    <br>
+    <br>
+    Comment: <textarea name = "comment" cols = "50" ng-model="post.comment" rows = "5" placeholder= "Write your comment here" required ng-maxlength="200"></textarea>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <hr>
+  <h3> 5 Most Recent Posts </h3>
+  </div>

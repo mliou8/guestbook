@@ -1,15 +1,42 @@
-{% extends "layout.html" %}
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+  <div ng-app="guestbook">
+    <div ng-controller="MainController">
+    <div ng-include = " 'navbar.html' "> </div>
+    <input type="text" ng-model="scopeProperty"/>
+    {{scopeProperty}}
 
-{% block content %}
-  <h3>Pages</h3>
-  <h3> Greetings Human, welcome to the Guest Page  </h3>
-  <h4> (Please write a comment, enter your name, and hit submit) </h4>
-  <hr>
-  <form method="POST" action="/guestbook/submit">
-    Name: <input type="text" name="name" />
-    Comment: <textarea name = "comment" cols = "50" rows = "5"> Write your comment here
-    </textarea>
-    <button type="submit">Pubmit</button>
-  </form>
-  <hr>
-{% endblock %}
+    <div class="container content">
+    </div>
+
+    <ui-view> </ui-view>
+    </div>
+
+    <div id="footer" class="container text-muted">
+      Michael Liou
+    </div>
+  </div>
+  </div>
+  </body>
+
+    <script src="angular/angular.js"></script>
+    <script src="angular-ui-router/release/angular-ui-router.js"> </script>
+    <script src="js/module.js"></script>
+    <script src="js/controllers/mainCtrl.js"></script>
+    <script src="js/controllers/postCtrl.js"></script>
+    <script src="js/factories/postFactory.js"></script>
+     <script src="js/directives/viewposts/post-state.js"></script>
+     <script src="js/directives/submitform/submit-state.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</html>

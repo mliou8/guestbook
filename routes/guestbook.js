@@ -1,21 +1,35 @@
 var express = require('express')
 var router = express.Router();
+var models = require('../models');
+var Post = models.Post;
 module.exports = router;
 
-router.get('/', function (req, res, next) {
 
-});
+router.get('/viewall', function (req, res, next) {
+        console.log("router hit")
+    Post.find({})
+    .then(function (data) {
+        res.json(data);
+    })
 
 
-router.get('/display', function (req, res, next) {
-	res.send("DISPLAY")
 });
 
 
 router.post('/submit', function (req, res, next) {
-	    var newPage = {
-            title: req.body,
-            contents: 'hey now youre an allstar'
-        };
-	res.send('post request');
+		//allows you to post a new page
+	    // var newPost = new Post({
+	    // 	comment: req.body.comment,
+	    // 	name: req.body.name
+     //    });
+     //    newPost.save()
+     Post.create({
+        name: req.body.name,
+        comment: req.body.comment
+     })
+        .then(function (newPost) {
+	       res.send(newPost);
+        }).then(null, function(err) {
+        	console.log(err);
+        })
 });

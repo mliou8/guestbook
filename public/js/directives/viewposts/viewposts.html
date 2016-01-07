@@ -1,0 +1,20 @@
+<head>
+<style>
+.posts {
+    border-width: 5px;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+}
+</style>
+</head>
+
+<div class ="container">
+
+<div ng-repeat="post in allPosts" class="posts">
+poster name : {{post.name}}
+comment : {{post.comment}}
+</div>
+
+</div>
+

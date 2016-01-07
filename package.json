@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.4.8",
+    "mongoose": "^4.2.9",
     "morgan": "^1.6.1",
     "swig": "^1.4.2"
   }
