@@ -5,7 +5,9 @@ app.factory('PostFactory', function ($http) {
         },
         getPost: function () {
             return $http.get('/guestbook/viewall')
+        },
+        formFeedback: function () {
+        	alert("Thank you for submitting!")
         }
     }
-
 });

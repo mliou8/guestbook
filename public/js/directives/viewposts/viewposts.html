@@ -10,8 +10,9 @@
 </head>
 
 <div class ="container">
+<input type="text" class="form-control" placeholder="Search Posts" ng-model="commentSearch">
 
-<div ng-repeat="post in allPosts" class="posts">
+<div ng-repeat="post in allPosts | filter: {comment: commentSearch}" class="posts" ng-style="{color: setColor(post.color)}">
 poster name : {{post.name}}
 comment : {{post.comment}}
 </div>

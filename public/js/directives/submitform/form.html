@@ -2,15 +2,61 @@
   <h3> Greetings Human, welcome to the Guest Page  </h3>
   <h4> (Please write a comment, enter your name, and hit submit) </h4>
   <hr>
-  <form method="POST" name="postForm" ng-submit="postComment()">
-    Name: <input type="text" name="name" ng-model="post.name" placeholder="Name" required ng-maxlength="10"/>
-    <br>
-    <br>
-    Comment: <textarea name = "comment" cols = "50" ng-model="post.comment" rows = "5" placeholder= "Write your comment here" required ng-maxlength="200"></textarea>
-    <br>
-    <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  <hr>
-  <h3> 5 Most Recent Posts </h3>
+
+  <form method="POST" name="postForm" ng-submit="postComment()" class="form-horizontal">
+
+  <div class="form-group">
+   <label for="name" class="control-label col-md-2">Name:</label>
+      <div class="col-md-10">
+        <input type="text" name="nameForm" ng-model="post.name" placeholder="Name" required ng-maxlength="20" ng-minlength="3"/>
+    </div>
   </div>
+
+
+
+  <div class="form-group">
+    <label for="comment" class="control-label col-md-2">Comment:</label>
+      <div class="col-md-10">
+        <textarea name = "comment" cols = "50" ng-model="post.comment" rows = "5" placeholder= "Write your comment here" required ng-maxlength="200" ng-model="post.current">{{post.comment}}</textarea>
+      </div>
+  </div>
+
+
+<!--   <p ng-show="postForm.name.$error.minlength">Username is too short.</p>
+  <p ng-show="postForm.name.$invalid">Username is too long.</p> -->
+
+
+  <div class="form-group">
+    <label for="color" class="control-label col-md-2"> Color: </label>
+    <div class="col-md-10">
+      <select name="color" ng-model="post.color">
+      <option value="light blue"> Light Blue </option>
+      <option value="purple"> Purple </option>
+      <option value="pink"> Pink </option>
+      <option value="ocean"> Ocean </option>
+      <option value="forest green"> Forest Green </option>
+      </select>
+    </div>
+  </div>
+
+  <div class= "form-group">
+    <div class="col-md-10 col-md-offset-2">
+       <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+  </form>
+
+
+  <hr>
+  <div class="row">
+  <h3> 5 Most Recent Posts </h3>
+      <div ng-repeat="post in range(1,5, allPosts)" class="posts" ng-style="{color: setColor(post.color)}">
+      comment: {{post.comment}}
+      <div ng-style="{color: setColor(black)}">
+     - <i> {{post.name}} </i>
+      </div>
+      </div>
+  </div>
+
+  <hr>
