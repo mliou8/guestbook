@@ -9,6 +9,7 @@ app.controller('postCtrl', function ($scope, PostFactory, allPosts) {
 			$scope.formFeedback();
 		})
 	}
+
 	$scope.black = "black";
 	var colorArray = [['light blue', "00CCFF"],
 	['purple', "330066"], ['pink', "CC0066"], ["ocean", "1E90FF"],
@@ -37,6 +38,9 @@ app.controller('postCtrl', function ($scope, PostFactory, allPosts) {
 	}
 	$scope.formFeedback = function() {
 		return PostFactory.formFeedback();
+	}
+	$scope.checkValid = function () {
+		return $scope.postForm.$valid;
 	}
 });
 

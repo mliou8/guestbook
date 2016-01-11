@@ -4,23 +4,19 @@
   <head>
     <title></title>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   </head>
   <body>
   <div class="container">
   <div ng-app="guestbook">
     <div ng-controller="MainController">
-    <div ng-include = " 'navbar.html' "> </div>
-    <input type="text" ng-model="scopeProperty"/>
-    {{scopeProperty}}
-
-    <div class="container content">
-    </div>
+    <navbar> </navbar>
 
     <ui-view> </ui-view>
     </div>
 
     <div id="footer" class="container text-muted">
-      Michael Liou
+    Created by: Michael Liou
     </div>
   </div>
   </div>
@@ -34,6 +30,8 @@
     <script src="js/factories/postFactory.js"></script>
      <script src="js/directives/viewposts/post-state.js"></script>
      <script src="js/directives/submitform/submit-state.js"></script>
+     <script src="js/directives/navbar/navbar-state.js"></script>
+     <script src="js/directives/cancelbutton/cancel-directive.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

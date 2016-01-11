@@ -14,8 +14,7 @@ var postSchema = new mongoose.Schema({
 		required: true
 	},
 	color: {
-		type: String,
-		required: true
+		type: String
 	}
 })
 

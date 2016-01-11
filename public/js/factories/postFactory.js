@@ -8,6 +8,9 @@ app.factory('PostFactory', function ($http) {
         },
         formFeedback: function () {
         	alert("Thank you for submitting!")
+        },
+        deletePost: function () {
+        	return $http.delete
         }
     }
 });

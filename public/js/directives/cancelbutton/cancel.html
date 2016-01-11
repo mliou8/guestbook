@@ -1,0 +1,28 @@
+<style>
+
+#orangeBox {
+    height: 100px;
+    width: 100px;
+    background-color: #FA6900;
+    border-radius: 5px;
+    position: relative;
+}
+
+#orangeBox:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c"; /* use the hex value here... */
+    font-size: 50px;
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+}
+ </style>
+
+
+<span ng-click="delete">
+  &#10060
+</span>

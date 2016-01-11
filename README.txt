@@ -5,8 +5,27 @@ The idea will be that people can leave a certain character comment along with th
 
 Current Goals:
 
--- Put the navbar into a
+-- Put the navbar into it's own directive element thing (Done)
 
+-- Allow users to specify a color for their post (jquery? Angular?)
+-- Do some google searching (dynamically create)
+
+-- Form validation?
+-- Do the workshop (ng-invalid, and ng-valid)
+
+-- Need to have 5 most recent posts? They show up on the bottom (in progress)
+
+-- Search bar (complete)
+
+-- Put in text, as your'e typing
+
+-- Display a image loading of some sort
+
+-- Substates (angular) toggling views
+
+-- Directives: outputting your posts
+
+---------
 
 -- Landing page will allow you to add a new comment (Done)
 

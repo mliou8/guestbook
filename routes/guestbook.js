@@ -6,29 +6,23 @@ module.exports = router;
 
 
 router.get('/viewall', function (req, res, next) {
-        console.log("router hit")
     Post.find({})
     .then(function (data) {
         res.json(data);
     })
-
-
 });
 
 
 router.post('/submit', function (req, res, next) {
-		//allows you to post a new page
-	    // var newPost = new Post({
-	    // 	comment: req.body.comment,
-	    // 	name: req.body.name
-     //    });
-     //    newPost.save()
+    console.log(req.body.name);
      Post.create({
         name: req.body.name,
-        comment: req.body.comment
+        comment: req.body.comment,
+        color: req.body.color
      })
         .then(function (newPost) {
-	       res.send(newPost);
+	       console.log("success function ", newPost)
+           res.send(newPost);
         }).then(null, function(err) {
         	console.log(err);
         })
