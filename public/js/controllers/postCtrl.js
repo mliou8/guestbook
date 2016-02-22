@@ -10,6 +10,7 @@ app.controller('postCtrl', function ($scope, PostFactory, allPosts) {
 		})
 	}
 
+
 	$scope.black = "black";
 	var colorArray = [['light blue', "00CCFF"],
 	['purple', "330066"], ['pink', "CC0066"], ["ocean", "1E90FF"],
